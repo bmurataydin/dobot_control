@@ -1,0 +1,23 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "dobot-control"
+version = "0.1.0"
+description = "Dobot Magician için Python kontrol, veri toplama ve test araçları"
+readme = "README.md"
+requires-python = ">=3.8"
+license = { text = "MIT" }
+dependencies = ["pyserial>=3.5", "numpy>=1.21"]
+
+[project.optional-dependencies]
+camera = ["opencv-python>=4.5"]
+plot = ["matplotlib>=3.5"]
+dev = ["pytest>=7", "opencv-python>=4.5", "matplotlib>=3.5"]
+
+[tool.setuptools.packages.find]
+include = ["dobot_toolkit*", "lib*"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]

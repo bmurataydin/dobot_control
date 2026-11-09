@@ -1,0 +1,9 @@
+# Zorunlu
+pyserial>=3.5
+numpy>=1.21
+
+# Opsiyonel
+opencv-python>=4.5     # kamera ile senkron veri toplama (examples/08)
+matplotlib>=3.5        # --plot seçenekleri
+pandas>=1.3            # CSV analizi (isteğe bağlı)
+pytest>=7              # testler
